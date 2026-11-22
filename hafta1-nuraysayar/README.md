@@ -1,8 +1,8 @@
 # Hafta 1 - B Grubu Görüntü İşleme Alıştırmaları
 
 ## 1. Alıştırma: Canny Kenar Tespiti ve Parametre Gözlemleri
-* **Eşik Değerleri (`Canny`):** `30, 100` gibi düşük eşik değerlerinde meyve dokuları ve gölgeler dahil çok fazla ince detay (gürültü) kenar olarak algılandı. `200, 300` gibi yüksek eşik değerlerinde ise yalnızca en belirgin dış sınırlar kaldı. En dengeli sonuç `100, 200` aralığında elde edildi.
-* **Bulanıklaştırma (`GaussianBlur`):** Çekirdek boyutu `(5, 5)` iken gürültüler temizlenip net kenarlar korundu. Çekirdek boyutu `(51, 51)` yapıldığında görüntü aşırı yumuşadığı için gradyan geçişleri sıfırlandı ve kenar tespiti çıktısı tamamen siyah oldu.
+* **Eşik Değerleri (`Canny`):** `30, 100` gibi düşük eşik değerlerinde meyve dokuları ve gölgeler  ince detay kenar olarak algılandı. `200, 300` gibi yüksek eşik değerlerinde ise yalnızca en belirgin dış sınırlar kaldı. En dengeli sonuç `100, 200` aralığında elde edildi.
+* **Bulanıklaştırma (`GaussianBlur`):** Çekirdek boyutu `(5, 5)` iken gürültüler temizlenip net kenarlar korundu. Çekirdek boyutu `(21, 21)` yapıldığında görüntü yumuşadığı için daha az detay aldı.
 
 ## 2. Alıştırma: Canlı Kamera Kenar Tespiti
 * `cv2.VideoCapture(0)` ve `while` döngüsü kullanılarak kameradan alınan kareler gerçek zamanlı olarak gri tonlamaya çevrildi, bulanıklaştırıldı ve canlı Canny kenar tespiti uygulandı.
